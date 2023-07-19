@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28769F5D-EB2C-4E74-B73F-E4D4D60290A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameSonic</RootNamespace>
+    <AssemblyName>GameSonic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mode1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mode1.Designer.cs">
+      <DependentUpon>Mode1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mode2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mode2.Designer.cs">
+      <DependentUpon>Mode2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instruct.Designer.cs">
+      <DependentUpon>Instruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGame.Designer.cs">
+      <DependentUpon>MenuGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TopScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopScore.Designer.cs">
+      <DependentUpon>TopScore.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Mode1.resx">
+      <DependentUpon>Mode1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode2.resx">
+      <DependentUpon>Mode2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instruct.resx">
+      <DependentUpon>Instruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGame.resx">
+      <DependentUpon>MenuGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopScore.resx">
+      <DependentUpon>TopScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DOWN.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obstacle-3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obstacle-2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoldCoin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmongUs1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obstacle-1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rong.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rong1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rong2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoombie.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Linh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoombie1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rong3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicM2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicNotRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThuocBatTu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicBatTu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bluemoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Night.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Afternoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperNotRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperFly.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueFireBall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireBall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicRunLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGM2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicFly.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Img_btnFly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Img_EvFly.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Img_TopScore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GokuNotRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GokuDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GokuRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegaRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegaNotRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegaDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonicFlyLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2BG3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2BG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2BG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GokuRunLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegaRunLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperFlyLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElectricBall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueBall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinM2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

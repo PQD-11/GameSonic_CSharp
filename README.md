@@ -16,4 +16,6 @@ Description: The game is inspired by T-rex games and plane shooting games. Game 
   
 ## Demo Mode 1
 
+![alt f](https://github.com/PQD-11/GameSonic_CSharp/blob/main/Images/Mode1.gif?raw=true)
+
 ## Demo Mode 2 

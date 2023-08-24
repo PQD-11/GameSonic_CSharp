@@ -3,8 +3,8 @@
 Description: The game is inspired by T-rex games and plane shooting games. Game built using Winforms C#
 
 ## Game Menu 
-
-<img src="/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<p align="center">
+  <img src="https://github.com/PQD-11/GameSonic_CSharp/blob/main/Images/Menu.png" alt="MarineGEO circle logo" style="height: 250px; width:400px;">
 
 ## Top Score 
 

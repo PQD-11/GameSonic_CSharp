@@ -4,6 +4,8 @@ Description: The game is inspired by T-rex games and plane shooting games. Game 
 
 ## Game Menu 
 
+<img src="/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+
 ## Top Score 
 
 ## Instructions
